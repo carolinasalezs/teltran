@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: relative;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: whitesmoke;
+  padding-top: 100px;
+  font-size: medium;
+}
+#logo {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  display: inline-flex;
+  width: 50px;
+  height: 68px;
+  z-index: 2000;
+  }
+
+#menu {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  background-color: rgb(27, 27, 27);
+  justify-content: center;
+  text-align: right;
+  background: (27,27,27);
+  z-index: 1000;
+  }
+  
+  #menu a {
+  display: inline-flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 22px;
+  text-decoration: none;
+  font-size: larger;
+  }
+
+  #menu a:hover {
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  }
+
+  footer{
+    background: whitesmoke;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    }
+    hr{
+      bottom: 0;
+      left: 0;
+      color: #5e5e5e;
+    }
+    p{
+      color: #5e5e5e;
+      font-size: x-small;
+    }
+
+
+.container {
+  flex-direction: column;
+  border-spacing: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+.wrapper {
+  position: relative;
+  max-width: 1100px;
+  width: 120%;
+  right: -12%;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  right: 98%;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  right: 15%; /* Ajuste o valor conforme necessário */
+}
+
+.wrapper i:last-child {
+  left: 97%; /* Ajuste o valor conforme necessário */
+}
+
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 10px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 450px;
+  list-style: none;
+  background: #5e5e5e;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.carousel .card .img {
+  height: 208px;
+  width: 138px;
+}
+
+.card .img img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+ 
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  color: #000;
+}
+.carousel .card span {
+  color: #4b4b4b;
+  font-size: 1.31rem;
+}
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+.grid-container {
+     display: grid;
+     grid-template-columns: auto auto auto auto auto;
+     padding: 80px;
+}
+
+.filme-card{
+  padding-left: 20%;
+  padding-bottom: 30%;
+   width: 180px;
+   height: 160px;
+   
+}
+
+  
+  
